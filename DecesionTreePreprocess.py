@@ -79,5 +79,5 @@ features_data.drop(columns=to_drop, inplace=True)
 
 # Concatenate the target column back and save the processed data to a new CSV file.
 new_data = pd.concat([features_data, target_column], axis=1)  # Re-include the target column.
-new_data.to_csv("E:\\Machine_Learning_projects\\data\\LoanDefaulter\\train\\new_train.csv", index=False)  # Save to CSV.
+new_data.to_csv("data\\LoanDefaulter\\train\\new_train.csv", index=False)  # Save to CSV.
 
