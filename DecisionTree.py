@@ -66,7 +66,6 @@ print(f"Depth of the Decision Tree: {clf.tree_.max_depth}")
 print(f"Number of Nodes in the Decision Tree: {clf.tree_.node_count}")
 print(f"Number of Leaves in the Decision Tree: {clf.tree_.n_leaves}")
 
-
 # Visualize the trained Decision Tree using matplotlib
 # figsize: Specifies the size of the figure in (width, height) inches.
 plt.figure(figsize=(20, 10))
