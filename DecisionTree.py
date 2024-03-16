@@ -45,19 +45,18 @@ clf = DecisionTreeClassifier(min_samples_leaf=15, ccp_alpha=0.000008)
 clf.fit(X_train, y_train)
 
 # Save the fitted model to a specified path for later use or deployment
-model_path = "Results\\DecisionTree\\model.joblib"
+model_path = "results\\DecisionTree\\model.joblib"
 dump(clf, model_path)
 
 # Export the trained Decision Tree model to a DOT file for visualization
-dot_file_path = "Results\\DecisionTree\\tree.dot"
+dot_file_path = "results\\DecisionTree\\tree.dot"
 export_graphviz(clf, out_file=dot_file_path, feature_names=X.columns)
 
-
-# 预测训练集和测试集
+# Predict the target values for both training and testing sets
 y_train_pred = clf.predict(X_train)
 y_test_pred = clf.predict(X_test)
 
-# 计算训练集和测试集的准确率
+# Calculate and print the accuracy of the model on both training and testing sets
 train_accuracy = accuracy_score(y_train, y_train_pred)
 test_accuracy = accuracy_score(y_test, y_test_pred)
 
@@ -67,9 +66,9 @@ print(f"Depth of the Decision Tree: {clf.tree_.max_depth}")
 print(f"Number of Nodes in the Decision Tree: {clf.tree_.node_count}")
 print(f"Number of Leaves in the Decision Tree: {clf.tree_.n_leaves}")
 
-from sklearn.tree import plot_tree
-import matplotlib.pyplot as plt
 
+# Visualize the trained Decision Tree using matplotlib
+# figsize: Specifies the size of the figure in (width, height) inches.
 plt.figure(figsize=(20, 10))
 plot_tree(clf, feature_names=X.columns.tolist(), filled=True)
 plt.show()

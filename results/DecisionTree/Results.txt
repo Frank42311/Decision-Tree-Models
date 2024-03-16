@@ -1,0 +1,16 @@
+Decision Tree
+Training Accuracy: 98.03%
+Testing Accuracy: 97.83%
+Depth of the Decision Tree: 22
+Number of Nodes in the Decision Tree: 1365
+Number of Leaves in the Decision Tree: 683
+
+RF
+Training Accuracy: 99.68%
+Testing Accuracy: 98.22%
+
+GBT
+Gradient Boosting Trees Training Accuracy: 98.91%
+Gradient Boosting Trees Testing Accuracy: 98.50%
+
+XGB
